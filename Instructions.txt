@@ -1,0 +1,61 @@
+-- Introduction
+NQ Vault is popular android app which is used to hide your private files on your phone.
+However there is a major flaw in this which is it's encryption system. NQ vault uses Xor cipher which was discovered by Ninjadoge24. 
+I just used his discovery to write this program.
+
+
+-- Working 
+NQ Vault uses Xor cipher to encrypt your files. And it's very easy to crack.(For further reading search for Ninjadoge24 blog.)
+
+NQ Vault just picks up your file then perform xor operation on it's first 128 bytes with a single byte key.(Yes only one byte key!!)
+Then it renames your file and changes it's extension to .bin and moves your encrypted(Lol) file to /SystemAndroid/data/ folder on your phone.
+
+
+-- Requirements
+
+I've written this program on my android phone so this program is suitable and meant to be run on android phones. If you're on PC then i apologize yourself. The procedure is same on both.
+Also you should have some programming knowledge. (Just for editing files.)
+
+Software you will need -
+1. C Compiler (I used C4droid)
+2. Hex editor (I used Macro Hex Edit app, available on Playstore.)
+3. bitwise calculator (available online and android also available.)
+
+
+-- Procedure
+(Detailed version)
+- Create an empty folder. Copy Vault.c and your encrypted files there. 
+Encrypted files available are on your phone in folder /SystemAndroid/Data/
+there will be some folder like "MTUwOTQ0Mg==" or whatever. Look inside there will be folders like .image or .video, go inside you will see your encrypted files with .bin extension.
+Copy these files to your newly created folder.
+
+- Open encrypted file with hex editor
+Note the first bytes for magic numbers(first few starting bytes). 
+//If you're trying to decrypt .jpg file. Then you should know it starts with bytes FF D8 FF.//
+
+- Calculate the xor_byte.
+It's just open your encrypted file note first bytes like BD
+9A BD in my case. Google xor calculator, there xor your file's first bytes with FF D8 FF. (For .jpg files only. Every file has it's own magic number. Google yourself.)
+You may notice the result will be 42 42 42. So 42 is my xor_byte for decrypting "Sample.bin" file. Note your xor_byte which will be different.
+
+- Edit and run the code.
+Open the file Vault.c in C4droid or any other compiler.
+Edit the fields xor_byte, file_input and file_output according to your needs.
+And run the code.
+(Note- This program have difficulty with the .jpg images with lot's EXIF data. Those files are not decrypted properly. For that you have to do manual labour. Contact me if you need help.
+- @Intek13x_)
+
+
+-- Procedure(short version)
+- Create a empty file. Copy Vault.c and your encrypted files there.
+- Calculate the xor_byte for the encrypted file.
+- Edit the fields the xor_byte, file_input and file_output inside Vault.c file. Then run the program.
+- And always have a backup for doing anything.
+
+-- Credits
+- Ninjadoge24 for finding this serious flaw.
+- n0n3m4 for creating that awesome C4droid app
+-- And off course me. :-)
+
+P.S.- Sorry for the grammer and spelling mistakes.
+
