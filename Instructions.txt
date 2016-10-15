@@ -7,8 +7,8 @@ I just used his discovery to write this program.
 -- Working 
 NQ Vault uses Xor cipher to encrypt your files. And it's very easy to crack.(For further reading search for Ninjadoge24 blog.)
 
-NQ Vault just picks up your file then perform xor operation on it's first 128 bytes with a single byte key.(Yes only one byte key!!)
-Then it renames your file and changes it's extension to .bin and moves your encrypted(Lol) file to /SystemAndroid/data/ folder on your phone.
+NQ Vault just picks up your file then perform xor operation on it's first 128 bytes with a single byte key.
+Then it renames your file and changes it's extension to .bin and moves your encrypted file to /SystemAndroid/data/ folder on your phone.
 
 
 -- Requirements
@@ -47,10 +47,10 @@ And run the code.
 
 
 -- Procedure(short version)
-- Create a empty file. Copy Vault.c and your encrypted files there.
+- Create a empty folder. Copy Vault.c and your encrypted files there.
 - Calculate the xor_byte for the encrypted file.
 - Edit the fields the xor_byte, file_input and file_output inside Vault.c file. Then run the program.
-- And always have a backup for doing anything.
+- And always have a backup before doing anything.
 
 -- Credits
 - Ninjadoge24 for finding this serious flaw.
