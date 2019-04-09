@@ -25,7 +25,7 @@ Open terminal, `cd` to that directory, then type "`python3 vault.py`" in termina
 ***Credits :*** 
 
  - Original credit and praise goes to **NinjaDoge24** for finding this flaw in NQ Vault. Read his [blog](https://ninjadoge24.github.io) for more info. 
- - **Rafi Ibrahim** for creating [Vault-Blaster](https://github.com/rafiibrahim8/Vault-Blaster), i was totally impressed by how he managed to put all those magik numbers in the [code](https://github.com/rafiibrahim8/Vault-Blaster/blob/master/funcs.c). 
+ - **Rafi Ibrahim** for creating [Vault-Blaster](https://github.com/rafiibrahim8/Vault-Blaster), i was totally impressed by how he managed to put all those magic numbers in the [code](https://github.com/rafiibrahim8/Vault-Blaster/blob/master/funcs.c). 
  - **Prem Kumar** for creating [this](https://github.com/prmsrswt/nqvault-decrypt) awesome script.  
  
  
